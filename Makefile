@@ -7,10 +7,11 @@ install:
 	cp $(HEADERS) $(DESTDIR)$(PREFIX)/include/io
 
 ## -- manpages --
-install: install-man
-install-man: ./doc/fcopy.3.md 
+MAN_3=./doc/fcopy.3 
+install: install-man3
+install-man3: $(MAN_3)
 	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man3
-	cp ./doc/fcopy.3  $(DESTDIR)$(PREFIX)/share/man/man3
+	cp $(MAN_3) $(DESTDIR)$(PREFIX)/share/man/man3
 ## -- manpages --
 ## -- license --
 install: install-license
