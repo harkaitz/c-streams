@@ -7,6 +7,7 @@ all:
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/include/io
 	cp $(HEADERS) $(DESTDIR)$(PREFIX)/include/io
+clean:
 
 ## -- manpages --
 ifneq ($(PREFIX),)
