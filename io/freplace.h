@@ -28,7 +28,7 @@ int freplace_a(FILE *_i, FILE *_o, const char *_map[]) {
         int         match_count = 0;
         const char *match_found = NULL;
         /* Search on mapping. */
-        for (int m=0; m<mapsz; m++) {
+        for (size_t m=0; m<mapsz; m++) {
             int        *matched   = match+m;
             const char *candidate = _map[m*2];
             if (chr == candidate[*matched]) {

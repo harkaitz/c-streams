@@ -1,13 +1,26 @@
-DESTDIR=
-PREFIX =/usr/local
-HEADERS=io/fcopy.h io/freplace.h io/stdio-rec.h
+DESTDIR  =
+PREFIX   =/usr/local
+HEADERS  =io/fcopy.h io/freplace.h io/stdio-rec.h
+CC       =gcc
+CFLAGS   =-Wall -g
+PROGRAMS =tools/freplace tools/fcopy
+
 
 ## ---------------------------------------------------
-all:
-install:
+all: $(PROGRAMS)
+install: $(PROGRAMS)
 	mkdir -p $(DESTDIR)$(PREFIX)/include/io
 	cp $(HEADERS) $(DESTDIR)$(PREFIX)/include/io
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	cp $(PROGRAMS) $(DESTDIR)$(PREFIX)/bin
 clean:
+	rm -f $(PROGRAMS)
+
+## ---------------------------------------------------
+tools/%: tools/%.c $(HEADERS)
+	$(CC) -o $@ $< $(LDFLAGS) $(CFLAGS) $(CPPFLAGS) $(LIBS)
+
+
 
 ## -- manpages --
 ifneq ($(PREFIX),)
