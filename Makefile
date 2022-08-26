@@ -35,7 +35,8 @@ endif
 ifneq ($(PREFIX),)
 install: install-license
 install-license: LICENSE
-	mkdir -p $(DESTDIR)$(PREFIX)/share/doc/c-streams
-	cp LICENSE $(DESTDIR)$(PREFIX)/share/doc/c-streams
+	@echo 'I share/doc/c-streams/LICENSE'
+	@mkdir -p $(DESTDIR)$(PREFIX)/share/doc/c-streams
+	@cp LICENSE $(DESTDIR)$(PREFIX)/share/doc/c-streams
 endif
 ## -- license --
