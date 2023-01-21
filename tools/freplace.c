@@ -7,7 +7,7 @@
 
 #define COPYRIGHT_LINE \
     "Bug reports, feature requests to gemini|https://harkadev.com/oss" "\n" \
-    "Copyright (c) 2022 Harkaitz Agirre, harkaitz.aguirre@gmail.com" "\n" \
+    "Copyright (c) 2023 Harkaitz Agirre, harkaitz.aguirre@gmail.com" "\n" \
     ""
 
 static char const help[] =
