@@ -2,9 +2,8 @@
 
 Some C header files implementing various stream operations.
 
-- [io/fcopy.h](io/fcopy.h) : Copy between streams and file descriptors.
+- [io/fcopy.h](io/fcopy.h) : Copy between streams and file descriptors. [manpage](./doc/fcopy.3.md)
 - [io/freplace.h](io/freplace.h) : Replace some substrings whilst copying throw streams.
-- [io/stdio-rec.h](io/stdio-rec.h) : Escape for recutils(1).
 
 ## Collaborating
 

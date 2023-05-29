@@ -1,6 +1,6 @@
 DESTDIR  =
 PREFIX   =/usr/local
-HEADERS  =io/fcopy.h io/freplace.h io/stdio-rec.h io/incbin-fp.h
+HEADERS  =io/freplace.h io/fcopy.h
 CC       =cc
 CFLAGS   =-Wall -g
 PROGRAMS =tools/freplace tools/fcopy
