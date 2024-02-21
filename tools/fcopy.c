@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 200809L
 #include "../io/fcopy.h"
 #include <string.h>
 #include <unistd.h>
@@ -6,6 +7,7 @@
 #include <syslog.h>
 #include <errno.h>
 #include <sys/wait.h>
+#include <strings.h>
 
 #define COPYRIGHT_LINE \
     "Copyright (c) 2023 Harkaitz Agirre, harkaitz.aguirre@gmail.com" "\n" \
